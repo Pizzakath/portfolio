@@ -1,0 +1,59 @@
+{
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true
+    },
+    "extends": ["eslint:recommended"],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2020,
+        "sourceType": "module"
+    },
+    "overrides": [
+        {
+            "files": ["**/*.ts", "**/*.tsx"],
+            "parser": "@typescript-eslint/parser",
+            "extends": [
+                "next/core-web-vitals",
+                "plugin:@typescript-eslint/recommended",
+                "airbnb-typescript",
+                "prettier",
+                "plugin:prettier/recommended"
+            ],
+            "settings": {
+                "react": {
+                    "version": "detect"
+                }
+            },
+            "parserOptions": {
+                "project": "./tsconfig.json"
+            },
+            "rules": {
+                "prefer-const": "warn",
+                "no-console": "warn",
+                "eqeqeq": "warn",
+                "default-case": "warn",
+                "no-use-before-define": "off",
+                "import/extensions": "off",
+                "@typescript-eslint/no-explicit-any": "off",
+                "@typescript-eslint/no-use-before-define": "off",
+                "@typescript-eslint/no-shadow": "off",
+                "@next/next/link-passhref": "off",
+                "prettier/prettier": ["error", {}, { "usePrettierrc": true }]
+            }
+        }
+    ],
+    "rules": {
+        "no-unused-vars": "off",
+        "prefer-const": "warn",
+        "no-console": "warn",
+        "eqeqeq": "warn",
+        "default-case": "warn",
+        "no-use-before-define": "off",
+        "react-hooks/exhaustive-dep": "off",
+        "prettier/prettier": ["error", {}, { "usePrettierrc": true }]
+    }
+}
